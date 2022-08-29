@@ -2,57 +2,24 @@
 <html lang="no">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../../../../../../style.css">
         <title>Hjem</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
     <body>
         <h1>Burum og Bjønnes Shopping & Shipping</h1>
 
-        <nav id="navigation">
-            <ul>
-                <li>
-                    <a href="index.html">Hjem</a>
-                </li>
-                <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Shopping</a>
-                    <ul>
-                        <div class="dropdown-content">
-                            <li>
-                                <a href="subsites/mat.html">Mat</a>
-                            </li>
-                            <li>
-                                <a href="subsites/ting.html">Ting</a>
-                            </li>
-                            <li>
-                                <a href="subsites/tjenester.html">Tjenester</a>
-                            </li>
-                        </div>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Shipping</a>
-                    <ul>
-                        <div class="dropdown-content">
-                            <li>
-                                <a href="subsites/bring.html">Bring</a>
-                            </li>
-                            <li>
-                                <a href="subsites/postnord.html">Postnord</a>
-                            </li>
-                            <li>
-                                <a href="subsites/porterbuddy.html">Porterbuddy</a>
-                            </li>
-                        </div>
-                    </ul>
-                </li>
-                <li>
-                    <a href="subsites/om.html">Om</a>
-                </li>
-                <li>
-                    <a href="subsites/faq.html">FAQ</a>
-                </li>
-            </ul>
-        </nav>
+        <!--Navigation bar-->
+        <div id="nav-placeholder">
+            
+        </div>
+        
+        <script>
+            $(function(){
+                $("#nav-placeholder").load("../../../../../../../../../../subsites/nav.html");
+            });
+            </script>
+        <!--end of Navigation bar-->
 
         <article>
             <header>
@@ -73,6 +40,7 @@
                 </figure>  
             </section>     
         </article>
-        <script src="scripts/main.js"></script>
+
+        <script src="../../../../../../../../../../scripts/main.js"></script>
     </body>
 </html>
