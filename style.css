@@ -6,11 +6,11 @@
     background-color: rgb(51, 51, 51);
 }
 
-.navbar_li {
+li {
     float: left;
 }
   
-.navbar_li a, .dropbtn {
+li a, .dropbtn {
     display: inline-block;
     color: white;
     text-align: center;
@@ -18,12 +18,12 @@
     text-decoration: none;
 }
 
-.navbar_li a:hover, .dropdown:hover .dropbtn {
+li a:hover, .dropdown:hover .dropbtn {
     background-color: #DAF7A6 ;
     color: black;
 }
   
-.navbar_li.dropdown {
+li.dropdown {
     display: inline-block;
 }
   
