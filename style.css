@@ -73,3 +73,11 @@ body {
  text-align:left;
  background-color:#fff
 }
+
+.main_content{
+    display: flex;
+    padding-left: 15px;
+    margin-left: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
