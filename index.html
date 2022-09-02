@@ -2,55 +2,98 @@
 <html lang="no">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Notater!</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <script src="https://cdnjs.com/libraries/pdf.js"></script>
+        <script src="https://kit.fontawesome.com/172d7e70e8.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
-        <h1>Nuddel69 VG Notater</h1>
-        <a href="https://old.reddit.com/u/mats164">Reddit</a>
+        <div class="container">
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a href="" class="navbar-item">
+                        <img src="media/snoo.png" alt="">
+                        <h1 class="title is-4">Nuddel69 Notater</h1>
+                    </a>
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="main-navbarDiv">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
 
+                <div id="main-navbarDiv" class="navbar-menu">
+                    <div class="navbar-start">
+                        <a href="" class="navbar-item">Hjem</a>
+                        <a href="https://www.overleaf.com/project/" class="navbar-item" target="_blank">LaTeX</a>
 
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet finibus nunc.
-        Mauris sed vehicula elit. Curabitur eu nulla mollis, auctor ante non, laoreet magna.
-        Suspendisse quis nibh blandit, molestie neque in, blandit enim. Suspendisse odio nunc,
-        tincidunt id ultrices et, dictum vitae nunc. Fusce turpis ipsum, rhoncus in libero
-        malesuada, aliquam gravida est. In molestie ipsum sit amet mattis aliquet. Maecenas mattis
-        dolor tincidunt ligula vehicula luctus. Sed aliquet nisi lacus, eget pulvinar sapien viverra
-        quis. Curabitur blandit interdum dui, eget pretium erat vulputate nec.</p>
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a href="" class="navbar-link">VG2</a>
 
-        <p>Nullam cursus magna urna, finibus mattis neque ornare sed. Curabitur pellentesque libero
-        purus, nec venenatis erat accumsan vitae. Morbi quis ex eu quam pretium bibendum a ut
-        tortor. Mauris sed commodo augue. Suspendisse sed consectetur diam, eget cursus risus. Etiam
-        et iaculis nisi. Etiam euismod hendrerit ullamcorper. Aliquam bibendum ipsum eget neque
-        mollis tincidunt. Cras libero nulla, vehicula et ante condimentum, bibendum porta ipsum.
-        Phasellus erat augue, eleifend vel elit sed, vehicula sagittis nibh. Praesent sem nunc,
-        convallis id fringilla id, venenatis venenatis mauris. Maecenas auctor sit amet justo id
-        rutrum. In vitae bibendum erat. Donec ac pretium enim. Sed bibendum enim sed orci sodales,
-        ac suscipit ipsum aliquet. Aenean quis accumsan massa, at laoreet eros.</p>
+                            <div class="navbar-dropdown">
+                                <a href="media/Matte_R1.pdf" class="navbar-item">Matte R1</a>
+                                <a href="media/Fysikk_1.pdf" class="navbar-item">Fysikk 1</a>
+                                <a href="media/Data__og_Informasjonsteknologi.pdf" class="navbar-item">Data- og Informasjonsteknologi</a>
+                            </div>
+                        </div>
 
-        <nav>
-            <ul>
-                <li>
-                    <a href="media/Matte_R2.pdf">Matte R2 Notater (VG3)</a>
-                </li>
-                <li>
-                    <a href="media/Data__og_Informasjonsteknologi.pdf">Data- og Informasjonsteknologi Notater (VG2)</a>
-                </li>
-                <li>
-                    <a href="media/Fysikk_1.pdf">Fysikk 1 Notater (VG2)</a>
-                </li>
-                <style>
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a href="" class="navbar-link">VG3</a>
 
-                </style>
-            </ul>
-        </nav>
+                            <div class="navbar-dropdown">
+                                <a href="media/Matte_R2.pdf" class="navbar-item">Matte R2</a>
+                            </div>
+                        </div>
 
-        <figure>
-            <img src="media/snoo.png" title="u/mats164">
-            <figcaption>u/mats164 snoo</figcaption>
-        </figure>        
+                    </div>
+                    <div class="navbar-end">
+                        <a href="https://github.com/Nuddel69/" class="navbar-item" target="_blank">
+                            <span class="icon">
+                                <i class="fa-brands fa-github"></i>
+                            </span>
+                        </a>
+    
+                        <a href="https://steamcommunity.com/profiles/76561198289383376/" class="navbar-item" target="_blank">
+                            <span class="icon">
+                                <i class="fa-brands fa-steam"></i>
+                            </span>
+                        </a>
+    
+                        <a href="https://old.reddit.com/u/mats164/" class="navbar-item" target="_blank">
+                            <span class="icon">
+                                <i class="fa-brands fa-reddit"></i>
+                            </span>
+                        </a>
+                    </div>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', () => {
 
-        <script src="scripts/main.js"></script>
-    </body>
+                        // Get all "navbar-burger" elements
+                        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+                        // Add a click event on each of them
+                        $navbarBurgers.forEach( el => {
+                            el.addEventListener('click', () => {
+
+                            // Get the target from the "data-target" attribute
+                            const target = el.dataset.target;
+                            const $target = document.getElementById(target);
+
+                            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                            el.classList.toggle('is-active');
+                            $target.classList.toggle('is-active');
+
+                            });
+                        });
+
+                        });
+                    </script>
+                </div>
+            </navbar>
+        </div>
+    <script src="scripts/main.js"></script>
+</body>
 </html>
