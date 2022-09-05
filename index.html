@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="no" class="has-navbar-fixed-top">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,88 +12,258 @@
 
     <body>
         <div class="container">
-            <nav class="navbar" role="navigation" aria-label="main navigation">
-                <div class="navbar-brand">
-                    <a href="" class="navbar-item">
-                        <img src="media/snoo.png" alt="">
-                        <h1 class="title is-4">Nuddel69 Notater</h1>
-                    </a>
-                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="main-navbarDiv">
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                    </a>
-                </div>
 
-                <div id="main-navbarDiv" class="navbar-menu">
-                    <div class="navbar-start">
-                        <a href="" class="navbar-item">Hjem</a>
-                        <a href="https://www.overleaf.com/project/" class="navbar-item" target="_blank">LaTeX</a>
+            <!-- Navbar -->
 
-                        <div class="navbar-item has-dropdown is-hoverable">
-                            <a href="" class="navbar-link">VG2</a>
-
-                            <div class="navbar-dropdown">
-                                <a href="media/Matte_R1.pdf" class="navbar-item">Matte R1</a>
-                                <a href="media/Fysikk_1.pdf" class="navbar-item">Fysikk 1</a>
-                                <a href="media/Data__og_Informasjonsteknologi.pdf" class="navbar-item">Data- og Informasjonsteknologi</a>
-                            </div>
-                        </div>
-
-                        <div class="navbar-item has-dropdown is-hoverable">
-                            <a href="" class="navbar-link">VG3</a>
-
-                            <div class="navbar-dropdown">
-                                <a href="media/Matte_R2.pdf" class="navbar-item">Matte R2</a>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="navbar-end">
-                        <a href="https://github.com/Nuddel69/" class="navbar-item" target="_blank">
-                            <span class="icon">
-                                <i class="fa-brands fa-github"></i>
-                            </span>
+            <div class="block">
+                <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+                    <div class="navbar-brand">
+                        <a href="" class="navbar-item">
+                            <img src="media/snoo.png" alt="">
+                            <h1 class="title is-4">Nuddel69 Notater</h1>
                         </a>
-    
-                        <a href="https://steamcommunity.com/profiles/76561198289383376/" class="navbar-item" target="_blank">
-                            <span class="icon">
-                                <i class="fa-brands fa-steam"></i>
-                            </span>
-                        </a>
-    
-                        <a href="https://old.reddit.com/u/mats164/" class="navbar-item" target="_blank">
-                            <span class="icon">
-                                <i class="fa-brands fa-reddit"></i>
-                            </span>
+                        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="main-navbarDiv">
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
                         </a>
                     </div>
-                    <script>
-                        document.addEventListener('DOMContentLoaded', () => {
 
-                        // Get all "navbar-burger" elements
-                        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+                    <div id="main-navbarDiv" class="navbar-menu">
+                        <div class="navbar-start">
+                            <a href="" class="navbar-item">Hjem</a>
+                            <a href="https://www.overleaf.com/project/" class="navbar-item" target="_blank">LaTeX</a>
 
-                        // Add a click event on each of them
-                        $navbarBurgers.forEach( el => {
-                            el.addEventListener('click', () => {
+                            <div class="navbar-item has-dropdown is-hoverable">
+                                <a href="" class="navbar-link">VG2</a>
 
-                            // Get the target from the "data-target" attribute
-                            const target = el.dataset.target;
-                            const $target = document.getElementById(target);
+                                <div class="navbar-dropdown">
+                                    <a href="media/Matte_R1.pdf" class="navbar-item">Matte R1</a>
+                                    <a href="media/Fysikk_1.pdf" class="navbar-item">Fysikk 1</a>
+                                    <a href="media/Data__og_Informasjonsteknologi.pdf" class="navbar-item">Data- og Informasjonsteknologi</a>
+                                </div>
+                            </div>
 
-                            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                            el.classList.toggle('is-active');
-                            $target.classList.toggle('is-active');
+                            <div class="navbar-item has-dropdown is-hoverable">
+                                <a href="" class="navbar-link">VG3</a>
+
+                                <div class="navbar-dropdown">
+                                    <a href="media/Matte_R2.pdf" class="navbar-item">Matte R2</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="navbar-end">
+                            <a href="https://github.com/Nuddel69/" class="navbar-item" target="_blank">
+                                <span class="icon">
+                                    <i class="fa-brands fa-github"></i>
+                                </span>
+                            </a>
+    
+                            <a href="https://steamcommunity.com/profiles/76561198289383376/" class="navbar-item" target="_blank">
+                                <span class="icon">
+                                    <i class="fa-brands fa-steam"></i>
+                                </span>
+                            </a>
+    
+                            <a href="https://old.reddit.com/u/mats164/" class="navbar-item" target="_blank">
+                                <span class="icon">
+                                    <i class="fa-brands fa-reddit"></i>
+                                </span>
+                            </a>
+                        </div>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', () => {
+
+                            // Get all "navbar-burger" elements
+                            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+                            // Add a click event on each of them
+                            $navbarBurgers.forEach( el => {
+                                el.addEventListener('click', () => {
+
+                                // Get the target from the "data-target" attribute
+                                const target = el.dataset.target;
+                                const $target = document.getElementById(target);
+
+                                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                                el.classList.toggle('is-active');
+                                $target.classList.toggle('is-active');
+
+                                });
+                            });
 
                             });
-                        });
+                        </script>
+                    </div>
+                </nav>
+            </div>
 
-                        });
-                    </script>
+            <!-- Navbar end -->
+
+            <!-- Posts -->
+
+            <div class="tile is-ancestor is-vertical">
+
+                <div class="tile is-parent is-horizontal">
+                    <div class="tile is-child box">
+                        <h1 class="title is-3">Hello World!</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
+                    </div>
+
+                    <!-- Post submission form -->
+
+                    <div class="tile is-child box">
+                        <h1 class="title is-3">New Post</h1>
+
+                        <div class="field">
+                            <div class="label">Post Title</div>
+                            <div class="control">
+                                <input type="text" class="input" placeholder="Title">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="label">Category</div>
+                            <div class="select">
+                                <select>
+                                    <option>Todo</option>
+                                    <option>Reminder</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="label">Post content</div>
+                            <div class="control">
+                                <textarea placeholder="Body" class="textarea"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="control">
+                                <label class="checkbox">
+                                    <input type="checkbox">
+                                    Is urgent <i class="fas fa-exclamation-triangle"></i>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="field is-grouped">
+                            <div class="control">
+                                <button class="button is-link is-primary">Submit</button>
+                            </div>
+                            <div class="control">
+                                <button class="button is-link is-light">Clear</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </navbar>
-        </div>
+
+                <div class="tile is-parent is-horizontal">
+                    <div class="tile is-child box">
+                        <h1 class="title is-3">Hello World!</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
+                    </div>
+                    <div class="tile is-child box">
+                        <h1 class="title is-3">Hello World!</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
+                    </div>
+                </div>
+                <div class="tile is-parent is-horizontal">
+                    <div class="tile is-child box">
+                        <h1 class="title is-3">Hello World!</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
+                    </div>
+                    <div class="tile is-child box">
+                        <h1 class="title is-3">Hello World!</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
+                    </div>
+                </div>
+                <div class="tile is-parent is-horizontal">
+                    <div class="tile is-child box">
+                        <h1 class="title is-3">Hello World!</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
+                    </div>
+                    <div class="tile is-child box">
+                        <h1 class="title is-3">Hello World!</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
+                    </div>
+                </div>
+                <div class="tile is-parent is-horizontal">
+                    <div class="tile is-child box">
+                        <h1 class="title is-3">Hello World!</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
+                    </div>
+                    <div class="tile is-child box">
+                        <h1 class="title is-3">Hello World!</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
+                    </div>
+                </div>
+                <div class="tile is-parent is-horizontal">
+                    <div class="tile is-child box">
+                        <h1 class="title is-3">Hello World!</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
+                    </div>
+                    <div class="tile is-child box">
+                        <h1 class="title is-3">Hello World!</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
+                    </div>
+                </div>
+                <div class="tile is-parent is-horizontal">
+                    <div class="tile is-child box">
+                        <h1 class="title is-3">Hello World!</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
+                    </div>
+                    <div class="tile is-child box">
+                        <h1 class="title is-3">Hello World!</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
+                    </div>
+                </div>
+                <div class="tile is-parent is-horizontal">
+                    <div class="tile is-child box">
+                        <h1 class="title is-3">Hello World!</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
+                    </div>
+                    <div class="tile is-child box">
+                        <h1 class="title is-3">Hello World!</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
+                    </div>
+                </div>
+                <div class="tile is-parent is-horizontal">
+                    <div class="tile is-child box">
+                        <h1 class="title is-3">Hello World!</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
+                    </div>
+                    <div class="tile is-child box">
+                        <h1 class="title is-3">Hello World!</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
+                    </div>
+                </div>
+                <div class="tile is-parent is-horizontal">
+                    <div class="tile is-child box">
+                        <h1 class="title is-3">Hello World!</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
+                    </div>
+                    <div class="tile is-child box">
+                        <h1 class="title is-3">Hello World!</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
+                    </div>
+                </div>
+                <div class="tile is-parent is-horizontal">
+                    <div class="tile is-child box">
+                        <h1 class="title is-3">Hello World!</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
+                    </div>
+                    <div class="tile is-child box">
+                        <h1 class="title is-3">Hello World!</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Posts End-->
+                
+            </div>
     <script src="scripts/main.js"></script>
 </body>
 </html>
