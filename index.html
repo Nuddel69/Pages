@@ -8,6 +8,28 @@
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
         <script src="https://cdnjs.com/libraries/pdf.js"></script>
         <script src="https://kit.fontawesome.com/172d7e70e8.js" crossorigin="anonymous"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+        <script type="text/x-mathjax-config">
+                MathJax.Hub.Config({
+                    displayAlign: "left",
+                    displayIndent: "0em",
+
+                    "HTML-CSS": { scale: 100,
+                                    linebreaks: { automatic: "false" },
+                                    webFont: "TeX"
+                                   },
+                    SVG: {scale: 100,
+                          linebreaks: { automatic: "false" },
+                          font: "TeX"},
+                    NativeMML: {scale: 100},
+                    TeX: { equationNumbers: {autoNumber: "AMS"},
+                           MultLineWidth: "85%",
+                           TagSide: "right",
+                           TagIndent: ".8em"
+                         }
+            });
+        </script>
     </head>
 
     <body>
@@ -35,7 +57,7 @@
                             <a href="https://www.overleaf.com/project/" class="navbar-item" target="_blank">LaTeX</a>
 
                             <div class="navbar-item has-dropdown is-hoverable">
-                                <a href="" class="navbar-link">VG2</a>
+                                <a href="#" class="navbar-link">VG2</a>
 
                                 <div class="navbar-dropdown">
                                     <a href="media/Matte_R1.pdf" class="navbar-item">Matte R1</a>
@@ -45,7 +67,7 @@
                             </div>
 
                             <div class="navbar-item has-dropdown is-hoverable">
-                                <a href="" class="navbar-link">VG3</a>
+                                <a href="#" class="navbar-link">VG3</a>
 
                                 <div class="navbar-dropdown">
                                     <a href="media/Matte_R2.pdf" class="navbar-item">Matte R2</a>
@@ -100,170 +122,79 @@
             </div>
 
             <!-- Navbar end -->
+            <div class="tile is-ancestor">
+                <div class="tile is-parent">
+                    <div class="tile is-child is-2"></div>
+                    <div class="tile is-child is-8 box">
+                        <div class="title is-2">Integrasjon</div>
 
-            <!-- Posts -->
-
-            <div class="tile is-ancestor is-vertical">
-
-                <div class="tile is-parent is-horizontal">
-                    <div class="tile is-child box">
-                        <h1 class="title is-3">Hello World!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
-                    </div>
-
-                    <!-- Post submission form -->
-
-                    <div class="tile is-child box">
-                        <h1 class="title is-3">New Post</h1>
-
-                        <div class="field">
-                            <div class="label">Post Title</div>
-                            <div class="control">
-                                <input type="text" class="input" placeholder="Title">
-                            </div>
-                        </div>
-                        <div class="field">
-                            <div class="label">Category</div>
-                            <div class="select">
-                                <select>
-                                    <option>Todo</option>
-                                    <option>Reminder</option>
-                                </select>
-                            </div>
+                        <div class="block">
+                            <div class="title is-5">Introduksjon</div>
+                            <p>
+                                Den mest grunnleggende betydningen av integrering er å legge sammen. Og når du ilustrer integrasjon på en graf, kan du se summeringsprosessen som en oppsummering av tynne rektangulære strimler med areal for å komme frem til det totale arealet under den kurven, som vist i denne figuren.
+                            </p>
                         </div>
 
-                        <div class="field">
-                            <div class="label">Post content</div>
-                            <div class="control">
-                                <textarea placeholder="Body" class="textarea"></textarea>
-                            </div>
+                        <div class="block">
+                            <div class="title is-5">Areal</div>
+                            <p>
+                                Fra fysikken husker vi at \[s=v\cdot t\]
+                                Dersom vi plotter dette i et fart/tid skjema får vi 
+                                <figure>
+                                    <img src="media/vei-fart.png">
+                                    <figcaption><i>Fart/tid graf med konstant fart</i></figcaption>
+                                </figure>
+                                Vi ser at ved å gange $x$-verdien med en $y$-verdien blir resultatet det samme som ved den tradisjonelle metoden ovenfor. Vi ser også at $x$ tilsvarer høyden, og $y$ er bredden på et rektangel under grafen. Her er strekningen <i>arealet</i> på dette rektangelet.
+                            </p>
+                        
+                        </div>
+                    
+                        <div class="block">
+                            <p>
+                                Dersom hastigheten endrer seg underveis, kan vi nok en gang referere til fysikken
+                                \[s = v_1\cdot t_1 + v_2 \cdot t_2\]
+                                <figure>
+                                    <img src="media/fart-tid-2.png">
+                                    <figcaption><i>Fart/tid graf med variabel fart</i></figcaption>
+                                </figure>
+                            </p>
                         </div>
 
-                        <div class="field">
-                            <div class="control">
-                                <label class="checkbox">
-                                    <input type="checkbox">
-                                    Is urgent <i class="fas fa-exclamation-triangle"></i>
-                                </label>
+                        <div class="block">
+                            <div class="title is-5">Aritmetisk Rekke</div>
+                            
+                            <div class="field">
+                                <div class="label">\[a_1\]</div>
+                                <div class="control">
+                                    <input type="number" class="input" id="a_1">
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="field is-grouped">
-                            <div class="control">
-                                <button class="button is-link is-primary">Submit</button>
+                            <div class="field">
+                                <div class="label">\[d\]</div>
+                                <div class="control">
+                                    <input type="number" class="input" id="diff">
+                                </div>
                             </div>
-                            <div class="control">
-                                <button class="button is-link is-light">Clear</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="tile is-parent is-horizontal">
-                    <div class="tile is-child box">
-                        <h1 class="title is-3">Hello World!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
-                    </div>
-                    <div class="tile is-child box">
-                        <h1 class="title is-3">Hello World!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
-                    </div>
-                </div>
-                <div class="tile is-parent is-horizontal">
-                    <div class="tile is-child box">
-                        <h1 class="title is-3">Hello World!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
-                    </div>
-                    <div class="tile is-child box">
-                        <h1 class="title is-3">Hello World!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
-                    </div>
-                </div>
-                <div class="tile is-parent is-horizontal">
-                    <div class="tile is-child box">
-                        <h1 class="title is-3">Hello World!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
-                    </div>
-                    <div class="tile is-child box">
-                        <h1 class="title is-3">Hello World!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
-                    </div>
-                </div>
-                <div class="tile is-parent is-horizontal">
-                    <div class="tile is-child box">
-                        <h1 class="title is-3">Hello World!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
-                    </div>
-                    <div class="tile is-child box">
-                        <h1 class="title is-3">Hello World!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
-                    </div>
-                </div>
-                <div class="tile is-parent is-horizontal">
-                    <div class="tile is-child box">
-                        <h1 class="title is-3">Hello World!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
-                    </div>
-                    <div class="tile is-child box">
-                        <h1 class="title is-3">Hello World!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
-                    </div>
-                </div>
-                <div class="tile is-parent is-horizontal">
-                    <div class="tile is-child box">
-                        <h1 class="title is-3">Hello World!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
-                    </div>
-                    <div class="tile is-child box">
-                        <h1 class="title is-3">Hello World!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
-                    </div>
-                </div>
-                <div class="tile is-parent is-horizontal">
-                    <div class="tile is-child box">
-                        <h1 class="title is-3">Hello World!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
-                    </div>
-                    <div class="tile is-child box">
-                        <h1 class="title is-3">Hello World!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
-                    </div>
-                </div>
-                <div class="tile is-parent is-horizontal">
-                    <div class="tile is-child box">
-                        <h1 class="title is-3">Hello World!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
-                    </div>
-                    <div class="tile is-child box">
-                        <h1 class="title is-3">Hello World!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
-                    </div>
-                </div>
-                <div class="tile is-parent is-horizontal">
-                    <div class="tile is-child box">
-                        <h1 class="title is-3">Hello World!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
-                    </div>
-                    <div class="tile is-child box">
-                        <h1 class="title is-3">Hello World!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
-                    </div>
-                </div>
-                <div class="tile is-parent is-horizontal">
-                    <div class="tile is-child box">
-                        <h1 class="title is-3">Hello World!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
-                    </div>
-                    <div class="tile is-child box">
-                        <h1 class="title is-3">Hello World!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dignissimos!</p>
+                            <div class="field">
+                                <div class="label">\[n\]</div>
+                                <div class="control">
+                                    <input type="number" class="input" id="nLim">
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <button class="button is-link is-light" onclick="aritmetiskRekke()">Finn Sum</button>
+                            </div>
+                            <div class="field" id="aritOutput"></div>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Posts End-->
-                
-            </div>
+
+
+        </div>
     <script src="scripts/main.js"></script>
 </body>
 </html>
